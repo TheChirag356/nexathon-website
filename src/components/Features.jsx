@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { TiLocationArrow } from "react-icons/ti";
+import {dateOfHackathon} from "../constants.js"
 
 const BentoTilt = ({ children, className = "" }) => {
   const [transformStyle, setTransformStyle] = useState("");
@@ -80,7 +80,7 @@ const Features = () => {
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
       nextYear = yyyy,
-      dayMonth = "03/25/",
+      dayMonth = `03/${dateOfHackathon}/`,
       birthday = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;

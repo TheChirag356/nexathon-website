@@ -3,65 +3,131 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Timeline = () => {
-//   gsap.from("")
-
+const singleTimelineObject = ({ date, title, description1, description2 }) => {
   return (
-    <section id="timeline" className="bg-blue-200 h-dvh w-screen text-blue-50">
-      <div className="container max-w-5xl px-4 py-12 mx-auto">
-        <div className="grid gap-4 mx-4 sm:grid-cols-12">
-          <div className="col-span-12 sm:col-span-3">
-            <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-violet-600">
-              <h3 className="text-3xl font-semibold">Morbi tempor</h3>
-              <span className="text-sm font-bold tracking-wider uppercase dark:text-gray-600">
-                Vestibulum diam nunc
-              </span>
+    <section className="h-dvh w-dvw px-[20vw] py-[10vw]">
+      <span>{date}</span>
+      <h1 className="m-0 font-[3rem]">{title}</h1>
+      <div className="flex gap-[3em]">
+        <p className="font-[1.2rem] w-[50vw]">
+          {description1 ||
+            "Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem."}
+        </p>
+        <p className="font-[1.2rem] w-[50vw]">
+          {description2 ||
+            "Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem."}
+        </p>
+      </div>
+    </section>
+  );
+};
+
+const Timeline = () => {
+  return (
+    <section id="timeline" className="m-0 h-dvh box-border w-screen px-10">
+      <div className="relative overflow-x-hidden">
+        <div className="flex w-[300vw] scrollx">
+          <svg
+            className="absolute top-[12em] left-[10vw] w-[50vw]"
+            viewBox="0 0 900 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z"
+              fill="#D9D9D9"
+            />
+            <mask
+              id="mask0_0_1"
+              className="w-[0]"
+              // style="mask-type:alpha"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="900"
+              height="10"
+            >
+              <path
+                d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z"
+                fill="#D9D9D9"
+              />
+            </mask>
+            <g mask="url(#mask0_0_1)">
+              <rect className="mask" y="-49" height="99" fill="black" />
+            </g>
+          </svg>
+          <singleTimelineObject
+            date="25-03-2025"
+            title="Hackathon begins"
+            description1="Stuff"
+            description2="More stuff"
+          />
+          <singleTimelineObject
+            date="25-03-2025"
+            title="Hackathon begins"
+            description1="Stuff"
+            description2="More stuff"
+          />
+          <singleTimelineObject
+            date="25-03-2025"
+            title="Hackathon begins"
+            description1="Stuff"
+            description2="More stuff"
+          />
+          {/* <section className="sec1 pin">
+            <span>Advanced</span>
+            <h1>Signify Elegance</h1>
+            <div className="flex gap-[3em]">
+              <p className="font-[.8rem]">
+                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
+                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
+                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
+                risus amet urna. Urna egestas lorem.
+              </p>
+              <p className="font-[.8rem]">
+                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
+                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
+                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
+                risus amet urna. Urna egestas lorem.
+              </p>
             </div>
-          </div>
-          <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
-            <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
-              <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
-                <h3 className="text-xl font-semibold tracking-wide">
-                  Donec porta enim vel{" "}
-                </h3>
-                <time className="text-xs tracking-wide uppercase dark:text-gray-600">
-                  Dec 2020
-                </time>
-                <p className="mt-3">
-                  Pellentesque feugiat ante at nisl efficitur, in mollis orci
-                  scelerisque. Interdum et malesuada fames ac ante ipsum primis
-                  in faucibus.
-                </p>
-              </div>
-              <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
-                <h3 className="text-xl font-semibold tracking-wide">
-                  Aliquam sit amet nunc ut
-                </h3>
-                <time className="text-xs tracking-wide uppercase dark:text-gray-600">
-                  Jul 2019
-                </time>
-                <p className="mt-3">
-                  Morbi vulputate aliquam libero non dictum. Aliquam sit amet
-                  nunc ut diam aliquet tincidunt nec nec dui. Donec mollis
-                  turpis eget egestas sodales.
-                </p>
-              </div>
-              <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
-                <h3 className="text-xl font-semibold tracking-wide">
-                  Pellentesque habitant morbi
-                </h3>
-                <time className="text-xs tracking-wide uppercase dark:text-gray-600">
-                  Jan 2016
-                </time>
-                <p className="mt-3">
-                  Suspendisse tincidunt, arcu nec faucibus efficitur, justo
-                  velit consectetur nisl, sit amet condimentum lacus orci nec
-                  purus. Mauris quis quam suscipit, vehicula felis id, vehicula
-                  enim.
-                </p>
-              </div>
+          </section>
+          <section className="sec2 pin">
+            <span className="anim">Advanced</span>
+            <h1 className="anim">Signify Elegance</h1>
+            <div className="flex gap-[3em] anim">
+              <p className="font-[.8rem]">
+                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
+                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
+                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
+                risus amet urna. Urna egestas lorem.
+              </p>
+              <p className="font-[.8rem]">
+                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
+                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
+                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
+                risus amet urna. Urna egestas lorem.
+              </p>
             </div>
-          </div>
+          </section>
+          <section className="sec3 pin">
+            <span className="anim">Advanced</span>
+            <h1 className="anim">Signify Elegance</h1>
+            <div className="flex gap-[3em] anim">
+              <p className="font-[.8rem]">
+                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
+                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
+                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
+                risus amet urna. Urna egestas lorem.
+              </p>
+              <p className="font-[.8rem]">
+                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
+                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
+                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
+                risus amet urna. Urna egestas lorem.
+              </p>
+            </div>
+          </section> */}
         </div>
       </div>
     </section>

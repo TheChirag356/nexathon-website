@@ -3,6 +3,7 @@ import AnimatedTitle from "./AnimatedTitle";
 import RoundedCorners from "./RoundedCorners";
 import gsap from "gsap";
 import Button from "./Button.jsx";
+import { dateOfHackathon } from "../constants.js";
 
 const ProblemStatements = () => {
   const frameRef = useRef("null");
@@ -42,6 +43,13 @@ const ProblemStatements = () => {
     });
   };
 
+  const buttonDisabled = () => {
+    const today = new Date();
+    const targetDate = new Date(`2025-03-${dateOfHackathon}`);
+
+    return today.toDateString() !== targetDate.toDateString();
+  };
+
   return (
     <section
       id="problem-statements"
@@ -79,15 +87,19 @@ const ProblemStatements = () => {
           </div>
           <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
             <div className="flex h-full w-fit flex-col items-center md:items-start">
-              <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
+              <p
+                id="info-about-problem-statement"
+                className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start"
+              >
                 Discover your problem statements.
               </p>
 
               <Button
                 id="realm-btn"
-                title="discover prologue"
-                containerClass="mt-5"
+                title="discover problem statements"
+                containerClass="mt-5 disabled:cursor-not-allowed disabled"
                 to="/problem-statements"
+                disabled={buttonDisabled()}
               />
             </div>
           </div>
