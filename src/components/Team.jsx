@@ -1,89 +1,189 @@
-import { useGSAP } from "@gsap/react";
 import AnimatedTitle from "./AnimatedTitle.jsx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import { TeamMembersList, Teams } from "../teamDetails.js";
+import {
+  RiTwitterXLine,
+  RiLinkedinFill,
+  RiGithubFill,
+  RiRedditFill,
+} from "react-icons/ri";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const X = ({ link }) => (
+  <a
+    href={link}
+    className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+    aria-label="X"
+  >
+    <RiTwitterXLine className="w-6 h-6" />
+  </a>
+);
+
+const LinkedIn = ({ link }) => (
+  <a
+    href={link}
+    className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+    aria-label="LinkedIn"
+  >
+    <RiLinkedinFill className="w-6 h-6" />
+  </a>
+);
+
+const Reddit = ({ link }) => (
+  <a
+    href={link}
+    className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+    aria-label="Reddit"
+  >
+    <RiRedditFill className="w-6 h-6" />
+  </a>
+);
+
+const Github = ({ link }) => (
+  <a
+    href={link}
+    className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+    aria-label="Github"
+  >
+    <RiGithubFill className="w-6 h-6" />
+  </a>
+);
+
+const Card = ({ name, role, imgSrc, socialLinks }) => (
+  <div className="flex flex-col items-center p-8 transition-colors duration-300 transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+    <img
+      className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+      src={imgSrc}
+      alt=""
+    />
+    <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+      {name}
+    </h1>
+    <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+      {role}
+    </p>
+    <div className="flex mt-3 -mx-2">
+      {Object.entries(socialLinks).map(([social, link]) => {
+        const components = {
+          linkedin: LinkedIn,
+          x: X,
+          github: Github,
+          reddit: Reddit,
+        };
+        const SocialComponent = components[social];
+        return SocialComponent ? (
+          <SocialComponent key={social} link={link} />
+        ) : null;
+      })}
+    </div>
+  </div>
+);
+
 export default function TeamSection() {
-  const teamMembers = [
-    { name: "John Doe", role: "Developer", img: "https://i.pravatar.cc/300" },
-    { name: "Jane Smith", role: "Designer", img: "https://i.pravatar.cc/300" },
-    {
-      name: "Alice Johnson",
-      role: "Manager",
-      img: "https://i.pravatar.cc/300",
-    },
-    { name: "Bob Brown", role: "Marketing", img: "https://i.pravatar.cc/300" },
-    { name: "Bob Brown", role: "Marketing", img: "https://i.pravatar.cc/300" },
-    { name: "Bob Brown", role: "Marketing", img: "https://i.pravatar.cc/300" },
-    { name: "Bob Brown", role: "Marketing", img: "https://i.pravatar.cc/300" },
-  ];
+  const teamMembersList = TeamMembersList;
+  const teams = Teams;
+  const [tab, setTab] = useState(Teams[0]);
 
-  const defaultSmallText = "The Champs";
-  const defaultLargeText =
-    "The te<b>a</b>m behi<b>n</b>d <br /> the <b>m</b>agic";
+  const handleButtonClick = (team) => {
+    console.log(team);
+    console.log(tab);
+    setTab(team);
+  };
 
-  const [smallText, setSmallText] = useState(defaultSmallText);
-  const [largeText, setLargeText] = useState(defaultLargeText);
+  // gsap.to("#section-2", {
+  //   clipPath: "circle(100% at 50% 50%)",
+  //   scrollTrigger: {
+  //     trigger: "#section-1",
+  //     start: "top top",
+  //     end: "bottom top",
+  //     scrub: true,
+  //     markers: true,
+  //   },
+  // });
 
-  useGSAP(() => {
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-    const Animation = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#team",
-        start: "center center",
-        end: `+=${500 * teamMembers.length} center`,
-        scrub: 0.5,
-        pin: true,
-        pinSpacing: true,
-      },
-    });
-
-    Animation.from("#team-images", {
-      x: "200%", // Move from right on desktop, from bottom on mobile
-      ease: "power1",
-    });
-
-    Animation.to("#team-images", {
-      x: "-100%", // Move up on mobile, left on desktop
-      ease: "power1",
-    });
-  });
+  useEffect(() => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#section-1",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          pin: true,
+          markers: true,
+        },
+      })
+      .to("#section-2", {
+        y: "-1dvh",
+        ease: "power2.out",
+      });
+  }, []);
 
   return (
-    <section id="team" className="min-h-dvh w-screen bg-blue-75 text-black">
+    <section id="team" className="bg-blue-200 min-h-dvh overflow-x-hidden">
       <div
-        id="text"
-        className="flex size-full flex-col items-center py-10 pb-24 justify-center"
+        id="section-1"
+        className="h-screen flex flex-col items-center justify-center"
       >
-        <p className="font-['general'] text-sm uppercase md:text-[10px] small-text-container">
-          {smallText}
+        <AnimatedTitle
+          title="our team"
+          containerClass="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white"
+        />
+        <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+          Lorem ipsum dolor sit amet consectetDur adipisicing elit. Illo
+          incidunt ex placeat modi magni quia error alias, adipisci rem
+          similique, at omnis eligendi optio eos harum.
         </p>
-        <div>
-          <AnimatedTitle
-            title={largeText}
-            sectionId="#team-section-text"
-            containerClass="mt-5 pointer-events-none !text-black relative z-10 selection:bg-yellow-300 special-font large-text-container"
-          />
-        </div>
-        <div
-          id="team-images"
-          className="absolute left-0 h-64 w-[50%] px-6 transform z-10"
-        >
-          <div className="flex flex-wrap gap-16 items-center justify-center py-2">
-            {teamMembers.map((member, index) => (
-              <img
-                id="member-image"
-                key={index}
-                src={member.img}
-                alt=""
-                className="h-24"
-                style={{ borderRadius: "50%" }}
-              />
-            ))}
+      </div>
+
+      <div
+        id="section-2"
+        className="bg-[url('https://assets.codepen.io/9051928/gradient.png')] min-h-dvh w-screen"
+      >
+        <div className="backdrop-blur-xl z-2 min-h-dvh w-screen">
+          <div
+            id="tabs"
+            className="flex items-center justify-center py-10 text-nowrap"
+          >
+            <div className="flex items-center p-1 border gap-2 border-white rounded-xl">
+              {teams.map((team) => (
+                <button
+                  key={team}
+                  className={`px-4 py-2 text-sm font-medium capitalize md:py-3 rounded-xl md:px-12 cursor-pointer font-['general'] ${
+                    team === tab
+                      ? "text-blue-200 bg-white "
+                      : "text-white transition-colors duration-300 hover:bg-white hover:text-black"
+                  }`}
+                  onClick={() => setTab(team)}
+                >
+                  {team}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div
+            id="members"
+            className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4"
+          >
+            {teamMembersList
+              .filter((member) => member.team === tab)
+              .map((member, index) => (
+                <Card
+                  key={index}
+                  name={member.name}
+                  role={
+                    member.role === "President" ||
+                    member.role === "Vice-President"
+                      ? `${member.role}`
+                      : `${member.team} ${member.role}`
+                  }
+                  imgSrc={member.img}
+                  socialLinks={member.links}
+                />
+              ))}
           </div>
         </div>
       </div>
