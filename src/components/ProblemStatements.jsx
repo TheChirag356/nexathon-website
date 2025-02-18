@@ -4,6 +4,7 @@ import RoundedCorners from "./RoundedCorners";
 import gsap from "gsap";
 import Button from "./Button.jsx";
 import { dateOfHackathon } from "../constants.js";
+import { TiLocationArrow } from "react-icons/ti";
 
 const ProblemStatements = () => {
   const frameRef = useRef("null");
@@ -89,15 +90,18 @@ const ProblemStatements = () => {
             <div className="flex h-full w-fit flex-col items-center md:items-start">
               <p
                 id="info-about-problem-statement"
-                className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start"
+                className="mt-3 max-w-sm text-center font-['circular-web'] text-violet-50 md:text-start"
               >
-                Discover your problem statements.
+                {buttonDisabled()
+                  ? "The problem statements for the hackathon will be revealed on the day of the event. Stay tuned!"
+                  : "The problem statements for the hackathon are now available. Click the button below to discover them!"}
               </p>
 
               <Button
                 id="realm-btn"
+                leftIcon={<TiLocationArrow />}
                 title="discover problem statements"
-                containerClass="mt-5 disabled:cursor-not-allowed disabled"
+                containerClass="flex-center gap-1 mt-5 disabled:cursor-not-allowed disabled"
                 to="/problem-statements"
                 disabled={buttonDisabled()}
               />
