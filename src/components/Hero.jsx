@@ -57,16 +57,16 @@ const Hero = () => {
   // );
 
   useGSAP(() => {
-    gsap.set("#video-frame", {
+    gsap.set("#image-frame", {
       clipPath: "polygon(14% 0%, 72% 0%, 90% 90%, 0% 100%)",
       borderRadius: "0 0 40% 10%",
     });
-    gsap.from("#video-frame", {
+    gsap.from("#image-frame", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       borderRadius: "0 0 0 0",
       ease: "power1.inOut",
       scrollTrigger: {
-        trigger: "#video-frame",
+        trigger: "#image-frame",
         start: "center center",
         end: "bottom center",
         scrub: true,
@@ -90,14 +90,14 @@ const Hero = () => {
         </div>
       )} */}
       <div
-        id="video-frame"
+        id="image-frame"
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
       >
-        <div>
-          <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
-            <img src="/img/space-bg.jp" alt="" className="absolute left-0 top-0 size-full object-cover object-center" />
-          </div>
-          {/* <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
+        <img src="/img/space-bg.jp" alt="" />
+        {/* <div> */}
+        {/* <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg"> */}
+        {/* </div> */}
+        {/* <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
             <div
               onClick={handleMiniVideoClick}
               className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
@@ -133,7 +133,7 @@ const Hero = () => {
             className="absolute left-0 top-0 size-full object-cover object-center"
             onLoadedData={handleVideoLoad}
           /> */}
-        </div>
+        {/* </div> */}
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-100">
           h<b>a</b>ckathon
         </h1>
@@ -148,7 +148,7 @@ const Hero = () => {
             </p>
 
             <Button
-              id="watch-trailer"
+              id="register-button"
               title="Register Here"
               leftIcon={<TiLocationArrow />}
               containerClass="bg-yellow-300 flex-center gap-1"

@@ -5,7 +5,6 @@ import Features from "../components/Features.jsx";
 import ProblemStatements from "../components/ProblemStatements.jsx";
 import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer.jsx";
-import Team from "../components/Team.jsx";
 import Sponsors from "../components/Sponsors.jsx";
 import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions.jsx";
 import Timeline from "../components/Timeline.jsx";
@@ -19,9 +18,8 @@ const MainPage = () => {
       <About />
       <Features />
       <ProblemStatements />
-      <Timeline />
       <Prizes />
-      <Team />
+      <Timeline />
       {/* <Sponsors /> */}
       <FrequentlyAskedQuestions />
       <Contact />
