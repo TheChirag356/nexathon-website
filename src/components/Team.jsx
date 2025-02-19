@@ -15,6 +15,8 @@ gsap.registerPlugin(ScrollTrigger);
 const X = ({ link }) => (
   <a
     href={link}
+    target="_blank"
+    rel="noreferrer"
     className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
     aria-label="X"
   >
@@ -25,6 +27,8 @@ const X = ({ link }) => (
 const LinkedIn = ({ link }) => (
   <a
     href={link}
+    target="_blank"
+    rel="noreferrer"
     className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
     aria-label="LinkedIn"
   >
@@ -35,6 +39,8 @@ const LinkedIn = ({ link }) => (
 const Reddit = ({ link }) => (
   <a
     href={link}
+    target="_blank"
+    rel="noreferrer"
     className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
     aria-label="Reddit"
   >
@@ -45,6 +51,8 @@ const Reddit = ({ link }) => (
 const Github = ({ link }) => (
   <a
     href={link}
+    target="_blank"
+    rel="noreferrer"
     className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
     aria-label="Github"
   >
