@@ -104,46 +104,63 @@ export default function TeamSection() {
   //   },
   // });
 
+  // useEffect(() => {
+  //   gsap
+  //     .timeline({
+  //       scrollTrigger: {
+  //         trigger: "#section-1",
+  //         start: "top top",
+  //         end: "bottom top",
+  //         pin: true,
+  //         markers: true,
+  //       },
+  //     })
+  //     .to("#section-2", {
+  //       ease: "power2.out",
+  //     });
+  // }, []);
+
   useEffect(() => {
-    gsap
-      .timeline({
+    gsap.fromTo(
+      "#section-2",
+      { clipPath: "circle(0% at 50% 0%)" },
+      {
+        clipPath: "circle(100% at 50% 50%)",
         scrollTrigger: {
-          trigger: "#section-1",
-          start: "top top",
+          trigger: "#section-2",
+          start: "top bottom",
           end: "bottom top",
           scrub: true,
-          pin: true,
           markers: true,
         },
-      })
-      .to("#section-2", {
-        y: "-1dvh",
-        ease: "power2.out",
-      });
+      }
+    );
   }, []);
 
   return (
     <section id="team" className="bg-blue-200 min-h-dvh overflow-x-hidden">
       <div
         id="section-1"
-        className="h-screen flex flex-col items-center justify-center"
+        className="h-dvh flex flex-col items-center justify-center"
       >
         <AnimatedTitle
           title="our team"
-          containerClass="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white"
+          containerClass="text-2xl font-semibold text-center lg:text-3xl bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent"
         />
         <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-          Lorem ipsum dolor sit amet consectetDur adipisicing elit. Illo
-          incidunt ex placeat modi magni quia error alias, adipisci rem
-          similique, at omnis eligendi optio eos harum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt
+          ex placeat modi magni quia error alias, adipisci rem similique, at
+          omnis eligendi optio eos harum.
         </p>
       </div>
-
       <div
         id="section-2"
         className="bg-[url('https://assets.codepen.io/9051928/gradient.png')] min-h-dvh w-screen"
       >
-        <div className="backdrop-blur-xl z-2 min-h-dvh w-screen">
+        <div
+          id="section-2-inner-div"
+          className="backdrop-blur-xl z-2 min-h-dvh w-screen px-5"
+        >
           <div
             id="tabs"
             className="flex items-center justify-center py-10 text-nowrap"
@@ -175,8 +192,7 @@ export default function TeamSection() {
                   key={index}
                   name={member.name}
                   role={
-                    member.role === "President" ||
-                    member.role === "Vice-President"
+                    member.team === "Core"
                       ? `${member.role}`
                       : `${member.team} ${member.role}`
                   }
@@ -188,5 +204,70 @@ export default function TeamSection() {
         </div>
       </div>
     </section>
+
+    // <section id="team" className="bg-blue-200 min-h-dvh overflow-x-hidden">
+    //   <div
+    //     id="section-1"
+    //     className="h-screen flex flex-col items-center justify-center"
+    //   >
+    //     <AnimatedTitle
+    //       title="our team"
+    //       containerClass="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white"
+    //     />
+    //     <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+    //       Lorem ipsum dolor sit amet consectetDur adipisicing elit. Illo
+    //       incidunt ex placeat modi magni quia error alias, adipisci rem
+    //       similique, at omnis eligendi optio eos harum.
+    //     </p>
+    //   </div>
+
+    //   <div
+    //     id="section-2"
+    //     className="bg-[url('https://assets.codepen.io/9051928/gradient.png')] min-h-dvh w-screen"
+    //   >
+    //     <div className="backdrop-blur-xl z-2 min-h-dvh w-screen">
+    // <div
+    //   id="tabs"
+    //   className="flex items-center justify-center py-10 text-nowrap"
+    // >
+    //   <div className="flex items-center p-1 border gap-2 border-white rounded-xl">
+    //     {teams.map((team) => (
+    //       <button
+    //         key={team}
+    //         className={`px-4 py-2 text-sm font-medium capitalize md:py-3 rounded-xl md:px-12 cursor-pointer font-['general'] ${
+    //           team === tab
+    //             ? "text-blue-200 bg-white "
+    //             : "text-white transition-colors duration-300 hover:bg-white hover:text-black"
+    //         }`}
+    //         onClick={() => setTab(team)}
+    //       >
+    //         {team}
+    //       </button>
+    //     ))}
+    //   </div>
+    // </div>
+    // <div
+    //   id="members"
+    //   className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4"
+    // >
+    //   {teamMembersList
+    //     .filter((member) => member.team === tab)
+    //     .map((member, index) => (
+    //       <Card
+    //         key={index}
+    //         name={member.name}
+    //         role={
+    //           member.team === "Core"
+    //             ? `${member.role}`
+    //             : `${member.team} ${member.role}`
+    //         }
+    //         imgSrc={member.img}
+    //         socialLinks={member.links}
+    //       />
+    //     ))}
+    // </div>
+    //     </div>
+    //   </div>
+    // </section>
   );
 }
