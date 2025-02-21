@@ -8,54 +8,6 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-  // const [currentIndex, setCurrentIndex] = useState(1);
-  // const [hasClicked, setHasClicked] = useState(false);
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [loadedVideos, setLoadedVideos] = useState(0);
-
-  // const totalVideos = 4;
-  // const nextVideoRef = useRef(null);
-
-  // const handleVideoLoad = () => {
-  //   setLoadedVideos((prev) => prev + 1);
-  // };
-
-  // const handleMiniVideoClick = () => {
-  //   setHasClicked(true);
-  //   setCurrentIndex(upcomingVideoIndex);
-  // };
-
-  // useEffect(() => {
-  //   if (loadedVideos === totalVideos - 1) {
-  //     setIsLoading(false);
-  //   }
-  // }, [loadedVideos]);
-
-  // useGSAP(
-  //   () => {
-  //     if (hasClicked) {
-  //       gsap.set("#next-video", { visibility: "visible" });
-  //       gsap.to("#next-video", {
-  //         transformOrigin: "center center",
-  //         scale: 1,
-  //         width: "100%",
-  //         height: "100%",
-  //         duration: 1,
-  //         ease: "power1.inOut",
-  //         onStart: () => nextVideoRef.current.play(),
-  //       });
-
-  //       gsap.from("#current-video", {
-  //         transformOrigin: "center center",
-  //         scale: 0,
-  //         duration: 1.5,
-  //         ease: "power1.inOut",
-  //       });
-  //     }
-  //   },
-  //   { dependencies: [currentIndex], revertOnUpdate: true }
-  // );
-
   useGSAP(() => {
     gsap.set("#image-frame", {
       clipPath: "polygon(14% 0%, 72% 0%, 90% 90%, 0% 100%)",
@@ -74,13 +26,14 @@ const Hero = () => {
     });
   });
   return (
-    <div className="relative h-dvh w-screen overflow-x-hidden">
+    <div id="home" className="relative h-dvh w-screen overflow-x-hidden">
       <div
         id="image-frame"
-        className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
+        className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-[linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)]"
       >
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-80"></div>
         <div>
-          <img src="img/hero2.jpg" alt="" />
+          <img src="img/hero2.jpg" alt="" className="" />
         </div>
 
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-100">
