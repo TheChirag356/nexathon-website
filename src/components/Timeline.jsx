@@ -24,7 +24,7 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className="p-0 bg-blue-200">
+    <div className="p-0 bg-blue-200 font-['circular-web']">
       <Container>
         {datesAndEvents.map((dateAndEvent, index) => (
           <TextComponent key={index} className="text">
