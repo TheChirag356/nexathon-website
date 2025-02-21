@@ -25,14 +25,21 @@ const Timeline = () => {
 
   return (
     <div className="p-0 bg-blue-200 font-['circular-web']">
-      <Container>
-        {datesAndEvents.map((dateAndEvent, index) => (
-          <TextComponent key={index} className="text">
-            {dateAndEvent.text}
-            <SpanComponent>{dateAndEvent.event}</SpanComponent>
-          </TextComponent>
-        ))}
-      </Container>
+      <div className="grid grid-cols-3">
+        <div className="flex justify-center items-center">
+          <h1 className="text-9xl text-center text-white py-10 uppercase md:-rotate-90 special-font font-['zentry']">
+            Timeli<b>n</b>e
+          </h1>
+        </div>
+        <Container className="col-span-2 font-['circular-web']">
+          {datesAndEvents.map((dateAndEvent, index) => (
+            <TextComponent key={index} className="text font-semibold">
+              {dateAndEvent.text}
+              <SpanComponent>{dateAndEvent.event}</SpanComponent>
+            </TextComponent>
+          ))}
+        </Container>
+      </div>
     </div>
   );
 };
@@ -87,6 +94,7 @@ const SpanComponent = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 3vw;
 `;
 
 const datesAndEvents = [
