@@ -1,137 +1,117 @@
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import styled from "styled-components";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const singleTimelineObject = ({ date, title, description1, description2 }) => {
-  return (
-    <section className="h-dvh w-dvw px-[20vw] py-[10vw]">
-      <span>{date}</span>
-      <h1 className="m-0 font-[3rem]">{title}</h1>
-      <div className="flex gap-[3em]">
-        <p className="font-[1.2rem] w-[50vw]">
-          {description1 ||
-            "Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem."}
-        </p>
-        <p className="font-[1.2rem] w-[50vw]">
-          {description2 ||
-            "Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem."}
-        </p>
-      </div>
-    </section>
-  );
-};
-
 const Timeline = () => {
+  useEffect(() => {
+    const textElements = document.querySelectorAll(".text");
+
+    textElements.forEach((text) => {
+      gsap.to(text, {
+        backgroundSize: "100%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: text,
+          start: "center 80%",
+          end: "center 20%",
+          scrub: true,
+        },
+      });
+    });
+  }, []);
+
   return (
-    <section id="timeline" className="m-0 h-dvh box-border w-screen px-10">
-      <div className="relative overflow-x-hidden">
-        <div className="flex w-[300vw] scrollx">
-          <svg
-            className="absolute top-[12em] left-[10vw] w-[50vw]"
-            viewBox="0 0 900 10"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z"
-              fill="#D9D9D9"
-            />
-            <mask
-              id="mask0_0_1"
-              className="w-[0]"
-              // style="mask-type:alpha"
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="0"
-              width="900"
-              height="10"
-            >
-              <path
-                d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z"
-                fill="#D9D9D9"
-              />
-            </mask>
-            <g mask="url(#mask0_0_1)">
-              <rect className="mask" y="-49" height="99" fill="black" />
-            </g>
-          </svg>
-          <singleTimelineObject
-            date="25-03-2025"
-            title="Hackathon begins"
-            description1="Stuff"
-            description2="More stuff"
-          />
-          <singleTimelineObject
-            date="25-03-2025"
-            title="Hackathon begins"
-            description1="Stuff"
-            description2="More stuff"
-          />
-          <singleTimelineObject
-            date="25-03-2025"
-            title="Hackathon begins"
-            description1="Stuff"
-            description2="More stuff"
-          />
-          {/* <section className="sec1 pin">
-            <span>Advanced</span>
-            <h1>Signify Elegance</h1>
-            <div className="flex gap-[3em]">
-              <p className="font-[.8rem]">
-                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
-                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
-                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
-                risus amet urna. Urna egestas lorem.
-              </p>
-              <p className="font-[.8rem]">
-                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
-                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
-                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
-                risus amet urna. Urna egestas lorem.
-              </p>
-            </div>
-          </section>
-          <section className="sec2 pin">
-            <span className="anim">Advanced</span>
-            <h1 className="anim">Signify Elegance</h1>
-            <div className="flex gap-[3em] anim">
-              <p className="font-[.8rem]">
-                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
-                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
-                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
-                risus amet urna. Urna egestas lorem.
-              </p>
-              <p className="font-[.8rem]">
-                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
-                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
-                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
-                risus amet urna. Urna egestas lorem.
-              </p>
-            </div>
-          </section>
-          <section className="sec3 pin">
-            <span className="anim">Advanced</span>
-            <h1 className="anim">Signify Elegance</h1>
-            <div className="flex gap-[3em] anim">
-              <p className="font-[.8rem]">
-                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
-                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
-                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
-                risus amet urna. Urna egestas lorem.
-              </p>
-              <p className="font-[.8rem]">
-                Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit
-                sed massa turpis in. Sit praesent arcu leo lectus pellentesque.
-                Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis
-                risus amet urna. Urna egestas lorem.
-              </p>
-            </div>
-          </section> */}
-        </div>
-      </div>
-    </section>
+    <div className="p-0 bg-blue-200">
+      <Container>
+        {datesAndEvents.map((dateAndEvent, index) => (
+          <TextComponent key={index} className="text">
+            {dateAndEvent.text}
+            <SpanComponent>{dateAndEvent.event}</SpanComponent>
+          </TextComponent>
+        ))}
+      </Container>
+    </div>
   );
 };
 
 export default Timeline;
+
+// Styled Components
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  color: white;
+  margin: 0 10%;
+`;
+
+const TextComponent = styled.h1`
+  font-size: 5vw;
+  letter-spacing: -0.01em;
+  line-height: 100%;
+  margin: 0;
+  white-space: nowrap;
+  width: 100%;
+  color: #b6b6b6;
+  background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 0%;
+  transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+  border-bottom: 1px solid #2f2b28;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  &:hover > span {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+`;
+
+const SpanComponent = styled.span`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #4246ce;
+  color: #0d0d0d;
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transform-origin: center;
+  transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const datesAndEvents = [
+  {
+    text: "20th March 2025",
+    event: "Registrations End",
+  },
+  {
+    text: "21st March 2025",
+    event: "Problem Statement Release",
+  },
+  {
+    text: "22nd March 2025",
+    event: "Round 1 (Online)",
+  },
+  {
+    text: "23rd March 2025",
+    event: "Round 2 (Online)",
+  },
+  {
+    text: "26th March 2025",
+    event: "Speaker Sessions (Offline)",
+  },
+  {
+    text: "27th March 2025",
+    event: "Nexathon Final Round (Offline)",
+  },
+];
