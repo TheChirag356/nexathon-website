@@ -18,9 +18,9 @@ const MainPage = () => {
       <About />
       <Features />
       <ProblemStatements />
-      <Prizes />
       <Timeline />
-      {/* <Sponsors /> */}
+      {/* <Prizes /> */}
+      <Sponsors />
       <FrequentlyAskedQuestions />
       <Contact />
       <Footer />
