@@ -29,7 +29,7 @@ const Hero = () => {
     <div id="home" className="relative h-dvh w-screen overflow-x-hidden">
       <div
         id="image-frame"
-        className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-[linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)]"
+        className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-80"></div>
         <div>
