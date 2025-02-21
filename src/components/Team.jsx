@@ -112,7 +112,6 @@ export default function TeamSection() {
           start: "top bottom",
           end: "bottom top",
           scrub: true,
-          markers: true,
         },
       }
     );
