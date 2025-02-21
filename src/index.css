@@ -59,7 +59,7 @@
 }
 
 @theme {
-  --inset-shadow-md: 0 0 500px rgba(0,0,0,0.9) inset;
+  --inset-shadow-md: 0 0 500px rgba(0, 0, 0, 0.9) inset;
 }
 
 @layer utilities {
@@ -215,7 +215,8 @@
 .three-body__dot:nth-child(2)::after {
   bottom: 0;
   left: 0;
-  animation: wobble1 var(--uib-speed) infinite calc(var(--uib-speed) * -0.15) ease-in-out;
+  animation: wobble1 var(--uib-speed) infinite calc(var(--uib-speed) * -0.15)
+    ease-in-out;
 }
 
 .three-body__dot:nth-child(3) {
@@ -240,7 +241,8 @@
 }
 
 @keyframes wobble1 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0%) scale(1);
     opacity: 1;
   }
@@ -251,7 +253,8 @@
 }
 
 @keyframes wobble2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0%) scale(1);
     opacity: 1;
   }
