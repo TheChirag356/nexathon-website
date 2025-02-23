@@ -2,7 +2,7 @@ import AnimatedTitle from "./AnimatedTitle.jsx";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { useState } from "react";
 
-const QuestionCard = ({ key, question, answer }) => {
+const QuestionCard = ({ question, answer }) => {
   const [isActive, setIsActive] = useState(false);
   return (
     <div className={`rounded-xl p-6 ${isActive ? "shadow-lg" : ""}`}>
@@ -65,13 +65,53 @@ export default FrequentlyAskedQuestions;
 
 const qna = [
   {
-    question: "What is Nexathon and what makes it unique?",
+    question: "What is Nexathon?",
     answer:
-      "Nexathon is a unique AI based hackathon hosted by GTBIT Rajouri Garden and Nexus - The AI Society. It is unique because it is the first of its kind hackathon that focuses on AI and its applications in various fields.",
+      "Nexathon is a hackathon organized by Nexus - the AI society of GTBIT where innovation and creativity thrive.",
   },
   {
-    question: "What is Nexathon and what makes it unique?",
+    question: "How do I sign up for Nexathon?",
     answer:
-      "Nexathon is a unique AI based hackathon hosted by GTBIT Rajouri Garden and Nexus - The AI Society. It is unique because it is the first of its kind hackathon that focuses on AI and its applications in various fields.",
+      "You can sign up for Nexathon by visiting our official website. The registration link is available on the homepage.",
+  },
+  {
+    question: "It's my first hackathon, what's something I should know?",
+    answer:
+      "No worries! Just build a project solving a problem using any tech stack—ChatGPT, Claude, YouTube, and Stack Overflow help!",
+  },
+  {
+    question: "Who can participate in Nexathon?",
+    answer:
+      "All are welcome to participate, whether you are currently enrolled in a college or university. All skill levels are welcome.",
+  },
+  {
+    question: "Can I join Nexathon alone, or do I need a team?",
+    answer:
+      "You cannot participate alone; you must be in a team of up to 4 members.",
+  },
+  {
+    question: "Are inter-college teams allowed to participate?",
+    answer:
+      "Yes, inter-college teams are allowed. You can form a team with students from different colleges or universities.",
+  },
+  {
+    question: "Will there be mentors or experts to help out?",
+    answer:
+      "Yes, experienced mentors and industry experts will be available to provide guidance, technical support, and feedback.",
+  },
+  {
+    question: "How can I keep up with the latest event news?",
+    answer:
+      "You can stay updated by visiting the Nexathon website and following the mentioned social media handles for the latest event news.",
+  },
+  {
+    question: "What are the judgment criteria?",
+    answer:
+      "Projects will be evaluated on innovation, technical execution, impact, presentation, and scalability, ensuring both creativity and feasibility.",
+  },
+  {
+    question: "Will meals be provided?",
+    answer:
+      "Yes, all registered participants will receive meals and refreshments throughout the event.",
   },
 ];
