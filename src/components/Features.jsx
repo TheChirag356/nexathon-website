@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import {dateOfHackathon} from "../constants.js"
+import { dateOfHackathon } from "../constants.js";
 
 const BentoTilt = ({ children, className = "" }) => {
   const [transformStyle, setTransformStyle] = useState("");
@@ -126,7 +126,13 @@ const Features = () => {
           <p className="font-['circular-web'] text-lg text-blue-50">
             About Nexathon
           </p>
-          <p className="max-w-md font-['circular-web'] text-lg text-blue-50 opacity-50"></p>
+          <p className="max-w-md font-['circular-web'] text-lg text-blue-50 opacity-50">
+            The Nexus at GTBIT is a transformative initiative designed to
+            enhance students academic experiences and position our college as a
+            premier hub for AI education and innovation. We aim to provide
+            significant industry exposure through organized events and resources
+            to shape students future careers.
+          </p>
         </div>
 
         <BentoTilt className="border-hsla relative mb-7 md:h-96 mx-auto overflow-hidden rounded-md h-[50vh] w-[90vw]">
