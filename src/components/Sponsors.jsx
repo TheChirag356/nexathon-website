@@ -6,28 +6,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Sponsors = () => {
   return (
-    // <div
-    //   id="sponsor"
-    //   className="w-dvw h-[100px] border-1"
-    //   // remove bg later
-    // >
-    //   <div className="list flex relative">
-    //     {companies.map((company) => {
-    //       return (
-    //         <div key={company.name} className="item flex flex-col items-center absolute left-[100%] ">
-    //           <img src={company.logo} alt={company.name} className="w-full" />
-    //           <p>{company.name}</p>
-    //         </div>
-    //       );
-    //     })}
-    //   </div>
-    // </div>
     <div className="py-12 sm:py-32 h-[80vh] flex justify-center items-center">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-lg/8 text-gray-900 font-['circular-web']">
           We are sponsored by some of the best companies in the world
         </h2>
-        <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+        <div className="sponsors mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <img
             alt="Transistor"
             src="https://tailwindui.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg"
