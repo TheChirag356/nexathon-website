@@ -19,7 +19,7 @@ const MainPage = () => {
       <Features />
       <ProblemStatements />
       <Timeline />
-      {/* <Prizes /> */}
+      <Prizes />
       <Sponsors />
       <FrequentlyAskedQuestions />
       <Contact />

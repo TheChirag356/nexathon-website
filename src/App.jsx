@@ -9,7 +9,6 @@ import Team from "./components/Team.jsx";
 // import Test from "./components/Test.jsx";
 import Socials from "./pages/Socials.jsx";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +29,6 @@ const App = () => {
     <div>
       <RouterProvider router={router} />
       <Analytics />
-      <SpeedInsights />
     </div>
   );
 };
