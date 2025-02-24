@@ -8,6 +8,7 @@ import { MainPage, ProblemStatementsPage, Register, ErrorPage } from "./pages";
 import Team from "./components/Team.jsx";
 // import Test from "./components/Test.jsx";
 import Socials from "./pages/Socials.jsx";
+import { Analytics } from "@vercel/analytics/react";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,7 +25,12 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+      <RouterProvider router={router} />
+      <Analytics />
+    </div>
+  );
 };
 
 export default App;
