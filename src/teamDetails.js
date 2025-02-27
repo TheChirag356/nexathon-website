@@ -17,6 +17,7 @@ const TeamMembersList = [
     links: {
       linkedin: "https://www.linkedin.com/in/viratchauhan/",
       x: "https://x.com/viratzzs",
+      github: "https://github.com/ViratCh04"
     },
   },
   {
