@@ -3,7 +3,7 @@ const TeamMembersList = [
     name: "Harleen Kaur",
     team: "Core",
     role: "President",
-    img: "https://i.pravatar.cc/307",
+    img: "/team_img/core/harleen_kaur.jpg",
     links: {
       linkedin: "www.linkedin.com/in/harleen-kaur-b94099257",
       x: "https://x.com/hk112767",
