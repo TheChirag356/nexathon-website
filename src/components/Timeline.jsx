@@ -31,7 +31,7 @@ const Timeline = () => {
             Timeli<b>n</b>e
           </h1>
         </div>
-        <Container className="col-span-2 font-['circular-web'] h-[50vh] md:h-dvh">
+        <Container className="col-span-2 font-['circular-web'] h-[50vh] md:h-dvh select-none">
           {datesAndEvents.map((dateAndEvent, index) => (
             <TextComponent key={index} className="text font-semibold">
               {dateAndEvent.text}
