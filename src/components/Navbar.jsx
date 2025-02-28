@@ -3,7 +3,7 @@ import Button from "./Button.jsx";
 import { TiLocationArrow } from "react-icons/ti";
 import { useWindowScroll } from "react-use";
 import gsap from "gsap";
-import { devfolioLink } from "../constants.js";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navContainerRef = useRef(null);
@@ -39,19 +39,6 @@ const Navbar = () => {
 
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
-
-  const toggleAudioIndicator = () => {
-    setIsAudioPlaying((prev) => !prev);
-    setIsIndicatorActive((prev) => !prev);
-  };
-
-  useEffect(() => {
-    if (isAudioPlaying) {
-      audioElementRef.current.play();
-    } else {
-      audioElementRef.current.pause();
-    }
-  }, [isAudioPlaying]);
 
   const navItems = [
     "Home",
@@ -99,27 +86,6 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-
-            <button
-              className="ml-10 flex items-center space-x-0.5 cursor-pointer"
-              onClick={toggleAudioIndicator}
-            >
-              <audio
-                ref={audioElementRef}
-                className="hidden"
-                src="/audio/loop.mp3"
-                loop
-              />
-              {[1, 2, 3, 4].map((bar) => (
-                <div
-                  key={bar}
-                  className={`indicator-line ${
-                    isIndicatorActive ? "active" : ""
-                  }`}
-                  style={{ animationDelay: `${bar * 0.1}s` }}
-                />
-              ))}
-            </button>
           </div>
         </nav>
       </header>
