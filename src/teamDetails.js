@@ -47,7 +47,7 @@ const TeamMembersList = [
     name: "Pulkit Chauhan",
     team: "Core",
     role: "Management Team Co-Lead",
-    img: "/team_img/core/pulkit_chauhan.HEIC",
+    img: "/team_img/core/pulkit_chauhan.png",
     links: {
       linkedin: "https://www.linkedin.com/in/pulkit-chauhan-172635259/",
       x: "https://x.com/tweetspulkit?s=11",
