@@ -31,9 +31,13 @@ const Hero = () => {
         id="image-frame"
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-80 z-2"></div>
         <div>
-          <img src="img/hero2.jpg" alt="" className="" />
+          <img
+            src="img/hero2.jpg"
+            alt=""
+            className="absolute left-0 top-0 size-full object-cover object-center"
+          />
         </div>
 
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-100">
