@@ -5,7 +5,7 @@ export default function Prizes() {
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 flex size-full flex-col items-center">
         <p className="font-['general'] text-sm uppercase md:text-[10px]">
-          Problem Statements
+          The Prizes for the winners
         </p>
 
         <AnimatedTitle
@@ -16,17 +16,17 @@ export default function Prizes() {
 
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
           <div className="relative lg:row-span-1">
-            <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+            <div className="absolute inset-px rounded-lg bg-white"></div>
+            <div className="relative flex h-full flex-col overflow-hidden">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 text-center font-['circular-web']">
+                <p className="mt-2 text-lg font-semibold tracking-tight text-gray-950 text-center font-['circular-web']">
                   Winner
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 text-center font-['general']">
                   8000 INR + Trophy
                 </p>
               </div>
-              <div className="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
+              <div className="@container relative min-h-[10rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
                 <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] shadow-2xl">
                   <img
                     className="size-full object-cover object-top"

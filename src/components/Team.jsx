@@ -145,7 +145,7 @@ export default function TeamSection() {
             id="tabs"
             className="flex items-center justify-center py-10 text-nowrap"
           >
-            <div className="flex items-center p-1 border gap-2 border-white rounded-xl">
+            <div className="flex items-center p-1 border gap-2 border-white rounded-xl flex-wrap justify-center">
               {teams.map((team) => (
                 <button
                   key={team}
