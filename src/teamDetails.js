@@ -43,6 +43,17 @@ const TeamMembersList = [
       github: "https://github.com/Gurnoor09",
     },
   },
+  {
+    name: "Pulkit Chauhan",
+    team: "Core",
+    role: "Management Team Co-Lead",
+    img: "/team_img/core/pulkit_chauhan.HEIC",
+    links: {
+      linkedin: "https://www.linkedin.com/in/pulkit-chauhan-172635259/",
+      x: "https://x.com/tweetspulkit?s=11",
+      github: "https://github.com/Pulkit4761",
+    },
+  },
 ];
 
 /* Instructions
