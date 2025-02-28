@@ -35,7 +35,7 @@ const FrequentlyAskedQuestions = () => {
       className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto items-center"
     >
       <div className="flex size-full flex-col items-center py-10 pb-24 justify-center gap-4">
-        <p className="font-['general'] text-sm uppercase md:text-[10px] small-text-container">
+        <p className="font-['general'] text-sm uppercase md:text-[10px] small-text-container text-center">
           Answers to the most frequently asked questions.
         </p>
         <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-10">
