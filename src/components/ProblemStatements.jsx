@@ -87,7 +87,7 @@ const ProblemStatements = () => {
             <RoundedCorners />
           </div>
           <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
-            <div className="flex h-full w-fit flex-col items-center md:items-start">
+            <div className="flex h-full w-fit flex-col items-center md:items-start px-3">
               <p
                 id="info-about-problem-statement"
                 className="mt-3 max-w-sm text-center font-['circular-web'] text-violet-50 md:text-start"
@@ -105,7 +105,9 @@ const ProblemStatements = () => {
                     ? "Stay tuned!"
                     : "discover problem statements"
                 }
-                containerClass="flex-center gap-1 mt-5 disabled:cursor-not-allowed disabled"
+                containerClass={`flex-center gap-1 mt-5 disabled:cursor-not-allowed ${
+                  buttonDisabled() ? "" : "!bg-[#80ED99]"
+                } `}
                 to="/problem-statements"
                 disabled={buttonDisabled()}
               />
