@@ -24,7 +24,7 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className="p-0 bg-blue-200 font-['circular-web']">
+    <div id="timeline" className="p-0 bg-blue-200 font-['circular-web']">
       <div className="grid md:grid-cols-3">
         <div className="flex justify-center items-center">
           <h1 className="text-9xl text-center text-white md:py-10 uppercase md:-rotate-90 special-font font-['zentry']">
