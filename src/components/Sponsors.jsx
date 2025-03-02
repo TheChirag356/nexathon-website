@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Sponsors = () => {
   return (
     <div
-      id="sponsor"
+      id="sponsors"
       className="min-h-dvh w-screen text-blue-200 mt-40 md:mt-80"
     >
       <div className="flex size-full flex-col items-center pt-10 pb-24">
