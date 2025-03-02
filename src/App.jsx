@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import { MainPage, ProblemStatementsPage, Register, ErrorPage } from "./pages";
 import Team from "./components/Team.jsx";
-// import Test from "./components/Test.jsx";
 import Socials from "./pages/Socials.jsx";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -18,7 +17,6 @@ const router = createBrowserRouter(
       <Route path="/register" element={<Register />} />
       <Route path="/team" element={<Team />} />
       <Route path="/socials" element={<Socials />} />
-      {/* <Route path="/test" element={<Test />} /> */}
       <Route path="*" element={<ErrorPage />} />
     </>
   )
