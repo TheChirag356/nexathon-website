@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Sponsors = () => {
   return (
-    <section
+    <div
       id="sponsor"
       className="min-h-dvh w-screen text-blue-200 mt-40 md:mt-80"
     >
@@ -41,7 +41,7 @@ const Sponsors = () => {
           ></Button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

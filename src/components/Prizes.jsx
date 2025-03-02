@@ -2,7 +2,7 @@ import AnimatedTitle from "./AnimatedTitle";
 
 export default function Prizes() {
   return (
-    <div className="py-16 sm:py-24">
+    <div id="prizes" className="py-16 sm:py-24">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-6xl lg:px-8 flex size-full flex-col items-center">
         <p className="font-['general'] text-sm uppercase md:text-[10px]">
           The Prizes for the winners
