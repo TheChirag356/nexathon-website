@@ -1,13 +1,16 @@
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import AnimatedTitle from "./AnimatedTitle.jsx";
 import Button from "./Button.jsx";
 import { TiLocationArrow } from "react-icons/ti";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Sponsors = () => {
+  const [isMouseHover, setIsMouseHover] = useState(false);
+
   return (
     <div
       id="sponsors"
@@ -23,8 +26,28 @@ const Sponsors = () => {
         <div className="w-full mx-2 mt-20">
           <div className="flex flex-wrap justify-center gap-15 my-10">
             {companies.map((company, index) => (
-              <div key={index} className="flex items-center">
-                <img src={company.logo} alt={company.name} className="h-20" />
+              <div
+                key={index}
+                className="flex flex-col items-center relative"
+                onMouseEnter={() => setIsMouseHover(true)}
+                onMouseLeave={() => setIsMouseHover(false)}
+              >
+                <Link to={company.link} className="flex flex-col items-center justify-center">
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className={`h-16 transition-all duration-100 ease-in-out ${
+                      isMouseHover ? "blur-sm" : ""
+                    }`}
+                  />
+                  <p
+                    className={`absolute transition-opacity duration-100 ease-in-out mt-2 font-['circular-web'] text-xl ${
+                      isMouseHover ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    {company.name}
+                  </p>
+                </Link>
               </div>
             ))}
           </div>
@@ -48,5 +71,9 @@ const Sponsors = () => {
 export default Sponsors;
 
 const companies = [
-  { name: "Dorahacks", logo: "https://dorahacks.io/_nuxt/12e03b15.svg" },
+  {
+    name: "Dorahacks",
+    logo: "https://dorahacks.io/_nuxt/12e03b15.svg",
+    link: "https://dorahacks.io",
+  },
 ];
