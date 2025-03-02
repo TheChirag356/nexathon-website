@@ -1,9 +1,9 @@
-import { devfolioLink } from "../constants";
+import { hackathonLink } from "../constants";
 import { useEffect } from "react";
 
 const Register = () => {
   useEffect(() => {
-    window.location.href = devfolioLink;
+    window.location.href = hackathonLink;
   }, []);
 
   return null;

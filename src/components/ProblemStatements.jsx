@@ -3,7 +3,7 @@ import AnimatedTitle from "./AnimatedTitle";
 import RoundedCorners from "./RoundedCorners";
 import gsap from "gsap";
 import Button from "./Button.jsx";
-import { dateOfHackathon } from "../constants.js";
+import { dateOfHackathon, monthOfHackathon } from "../constants.js";
 import { TiLocationArrow } from "react-icons/ti";
 
 const ProblemStatements = () => {
@@ -46,7 +46,7 @@ const ProblemStatements = () => {
 
   const buttonDisabled = () => {
     const today = new Date();
-    const targetDate = new Date(`2025-03-${dateOfHackathon}`);
+    const targetDate = new Date(`2025-${monthOfHackathon}-${dateOfHackathon}`);
 
     return today.toDateString() !== targetDate.toDateString();
   };

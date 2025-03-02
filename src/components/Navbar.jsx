@@ -66,8 +66,8 @@ const Navbar = () => {
               className="w-10 rounded-[50%]"
             />
             <Button
-              id="devfolio-button"
-              title="Devfolio"
+              id="hackathon-button"
+              title="Dorahacks"
               rightIcon={<TiLocationArrow />}
               containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
               to="/register"

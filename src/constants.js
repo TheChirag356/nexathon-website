@@ -1,4 +1,5 @@
-const devfolioLink = "https://devfolio.co";
-const dateOfHackathon = 25;
+const hackathonLink = "https://dorahacks.io";
+const dateOfHackathon = 3;
+const monthOfHackathon = 4;
 
-export { devfolioLink, dateOfHackathon };
+export { hackathonLink, dateOfHackathon, monthOfHackathon };
