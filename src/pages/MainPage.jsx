@@ -9,6 +9,7 @@ import Sponsors from "../components/Sponsors.jsx";
 import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions.jsx";
 import Timeline from "../components/Timeline.jsx";
 import Prizes from "../components/Prizes.jsx";
+import TeamSection from "../components/TeamSection.jsx";
 
 const MainPage = () => {
   return (
@@ -21,6 +22,7 @@ const MainPage = () => {
       <Timeline />
       <Sponsors />
       <Prizes />
+      <TeamSection />
       <FrequentlyAskedQuestions />
       <Contact />
       <Footer />
