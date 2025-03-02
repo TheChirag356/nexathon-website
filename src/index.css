@@ -136,6 +136,32 @@
   }
 }
 
+/* Animation for Button on Socials */
+@keyframes background-shine {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@layer utilities {
+  .animate-background-shine {
+    animation: background-shine 2s linear infinite;
+  }
+  
+  .bg-shine-gradient {
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+  }
+}
+
 /* Indicator Animation */
 @layer components {
   .indicator-line {
