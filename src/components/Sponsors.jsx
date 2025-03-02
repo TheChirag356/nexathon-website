@@ -32,7 +32,10 @@ const Sponsors = () => {
                 onMouseEnter={() => setIsMouseHover(true)}
                 onMouseLeave={() => setIsMouseHover(false)}
               >
-                <Link to={company.link} className="flex flex-col items-center justify-center">
+                <Link
+                  to={company.link}
+                  className="flex flex-col items-center justify-center"
+                >
                   <img
                     src={company.logo}
                     alt={company.name}
