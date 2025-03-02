@@ -107,27 +107,27 @@ const SpanComponent = styled.span`
 
 const datesAndEvents = [
   {
-    text: "20th March 2025",
+    text: "21st March 2025",
+    event: "Problem Statements Release",
+  },
+  {
+    text: "25th March 2025",
     event: "Registrations End",
   },
   {
-    text: "21st March 2025",
-    event: "Problem Statement Release",
-  },
-  {
-    text: "22nd March 2025",
+    text: "29th March 2025",
     event: "Round 1 (Online)",
   },
   {
-    text: "23rd March 2025",
+    text: "30th March 2025",
     event: "Round 2 (Online)",
   },
   {
-    text: "26th March 2025",
+    text: "2nd April 2025",
     event: "Speaker Sessions (Offline)",
   },
   {
-    text: "27th March 2025",
+    text: "3rd April 2025",
     event: "Nexathon Final Round (Offline)",
   },
 ];
