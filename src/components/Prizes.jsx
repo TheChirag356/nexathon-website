@@ -18,16 +18,16 @@ export default function Prizes() {
           {/* Winner */}
           <div className="relative lg:row-span-1">
             <div className="absolute inset-px rounded-lg bg-white"></div>
-            <div className="relative flex h-full flex-col overflow-hidden">
+            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(1.5rem+1px)]">
               <div className="px-6 pt-6 pb-2 sm:px-8 sm:pt-8">
-                <p className="text-lg font-semibold tracking-tight text-gray-950 text-center font-['circular-web']">
+                <p className="text-lg font-medium tracking-tight text-gray-950 text-center font-['circular-web']">
                   Winner
                 </p>
                 <p className="mt-1 max-w-lg text-sm/6 text-gray-600 text-center font-['general']">
                   8000 INR + Trophy
                 </p>
               </div>
-              <div className="@container relative min-h-[8rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
+              <div className="@container relative min-h-[20rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
                 <div className="absolute inset-x-8 top-6 bottom-0 overflow-hidden rounded-t-[12cqw] shadow-xl">
                   <img
                     className="size-full object-cover object-top"
@@ -88,15 +88,15 @@ export default function Prizes() {
           </div>
 
           {/* Best all Freshers Team */}
-          <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 min-w-[20rem]">
+          <div className="relative lg:col-start-2 lg:row-start-2 min-w-[20rem]">
             <div className="absolute inset-px rounded-lg bg-white"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
               <div className="px-6 pt-6 pb-2 sm:px-8 sm:pt-8">
                 <p className="text-lg font-medium tracking-tight text-gray-950 text-center font-['circular-web']">
-                  2nd Runner Up
+                  Best All Freshers Team
                 </p>
                 <p className="mt-1 max-w-lg text-sm/6 text-gray-600 text-center font-['general']">
-                  4000 INR + Trophy
+                  Exciting Swags
                 </p>
               </div>
               <div className="@container flex flex-1 items-center max-lg:py-4 lg:pb-2">
