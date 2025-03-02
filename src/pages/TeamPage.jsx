@@ -1,4 +1,4 @@
-import AnimatedTitle from "./AnimatedTitle.jsx";
+import AnimatedTitle from "../components/AnimatedTitle.jsx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useState, useEffect } from "react";
@@ -90,7 +90,10 @@ const Card = ({ name, role, imgSrc, socialLinks }) => (
   </div>
 );
 
-export default function TeamSection() {
+function TeamPage() {
+
+  document.title = "Nexathon | Team";
+
   const teamMembersList = TeamMembersList;
   const teams = Teams;
   const [tab, setTab] = useState(Teams[0]);
@@ -186,3 +189,5 @@ export default function TeamSection() {
     </section>
   );
 }
+
+export default TeamPage;

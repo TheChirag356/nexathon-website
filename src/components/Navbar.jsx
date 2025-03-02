@@ -45,9 +45,9 @@ const Navbar = () => {
     "About",
     "Problem Statements",
     "Timeline",
+    "Sponsors",
     "Prizes",
     "Team",
-    "Sponsors",
     "FAQ",
     "Contact",
   ];

@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { MainPage, ProblemStatementsPage, Register, ErrorPage } from "./pages";
-import Team from "./components/Team.jsx";
+import TeamPage from "./pages/TeamPage.jsx";
 import Socials from "./pages/Socials.jsx";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -15,7 +15,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<MainPage />} />
       <Route path="/problem-statements" element={<ProblemStatementsPage />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/team" element={<Team />} />
+      <Route path="/team" element={<TeamPage />} />
       <Route path="/socials" element={<Socials />} />
       <Route path="*" element={<ErrorPage />} />
     </>
