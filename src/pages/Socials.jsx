@@ -1,4 +1,10 @@
-import { FaDiscord, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import {
+  FaDiscord,
+  FaWhatsapp,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Button = ({ Icon, title, to }) => {
@@ -33,14 +39,28 @@ const Socials = () => {
               </h1>
             </div>
             <div className="flex flex-col gap-4 md:w-full w-[60%] !font-['circular-web']">
-              <Button Icon={FaWhatsapp} title="Whatsapp Group" to="#" />
-              <Button Icon={FaDiscord} title="Discord Server" to="#" />
+              <Button
+                Icon={FaLinkedin}
+                title="Nexus on Linkedin"
+                to="https://www.linkedin.com/company/nexus-ai-society"
+              />
               <Button
                 Icon={FaInstagram}
                 title="Nexus Instagram"
                 to="https://www.instagram.com/nexus_gtbit/"
               />
-              <Button Icon={FaInstagram} title="Nexathon Instagram" to="https://www.instagram.com/nexathon_gtbit/" />
+              <Button
+                Icon={FaYoutube}
+                title="Nexus on Youtube"
+                to="https://www.youtube.com/@Nexus-TheAISociety"
+              />
+              <Button Icon={FaWhatsapp} title="Whatsapp Group" to="#" />
+              <Button Icon={FaDiscord} title="Discord Server" to="#" />
+              <Button
+                Icon={FaInstagram}
+                title="Nexathon Instagram"
+                to="https://www.instagram.com/nexathon_gtbit/"
+              />
             </div>
           </div>
         </div>
