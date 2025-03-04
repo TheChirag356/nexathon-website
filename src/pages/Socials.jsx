@@ -40,7 +40,7 @@ const Socials = () => {
                 title="Nexus Instagram"
                 to="https://www.instagram.com/nexus_gtbit/"
               />
-              <Button Icon={FaInstagram} title="Nexathon Instagram" to="#" />
+              <Button Icon={FaInstagram} title="Nexathon Instagram" to="https://www.instagram.com/nexathon_gtbit/" />
             </div>
           </div>
         </div>
