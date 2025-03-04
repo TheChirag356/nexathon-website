@@ -23,7 +23,7 @@ const Socials = () => {
   return (
     <div className="h-dvh w-dvw">
       <div className="relative h-full w-full">
-        <div class="absolute inset-0 -z-10 h-full w-full bg-black bg-[radial-gradient(#8a8a8a_1px,transparent_1px)] [background-size:50px_50px]"></div>
+        <div className="absolute inset-0 -z-10 h-full w-full bg-black bg-[radial-gradient(#8a8a8a_1px,transparent_1px)] [background-size:50px_50px]"></div>
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center my-16 md:my-24 gap-8 w-xl">
             <div className="flex flex-col gap-4 size-full items-center">

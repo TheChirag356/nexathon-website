@@ -150,7 +150,7 @@
   .animate-background-shine {
     animation: background-shine 2s linear infinite;
   }
-  
+
   .bg-shine-gradient {
     background: linear-gradient(
       to right,
