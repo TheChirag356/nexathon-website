@@ -91,7 +91,6 @@ const Card = ({ name, role, imgSrc, socialLinks }) => (
 );
 
 function TeamPage() {
-
   document.title = "Nexathon | Team";
 
   const teamMembersList = TeamMembersList;
@@ -121,25 +120,11 @@ function TeamPage() {
   }, []);
 
   return (
-    <section id="team" className="bg-blue-200 min-h-dvh overflow-x-hidden">
       <div
-        id="section-1"
-        className="h-dvh flex flex-col items-center justify-center"
+        id="team"
+        className="bg-[url('https://assets.codepen.io/9051928/gradient.png')] min-h-dvh w-screen relative"
       >
-        <AnimatedTitle
-          title="our team"
-          containerClass="text-2xl font-semibold text-center lg:text-3xl bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent"
-        />
-        <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt
-          ex placeat modi magni quia error alias, adipisci rem similique, at
-          omnis eligendi optio eos harum.
-        </p>
-      </div>
-      <div
-        id="section-2"
-        className="bg-[url('https://assets.codepen.io/9051928/gradient.png')] min-h-dvh w-screen"
-      >
+        <div className=""></div>
         <div
           id="section-2-inner-div"
           className="backdrop-blur-xl z-2 min-h-dvh w-screen px-5"
@@ -186,7 +171,6 @@ function TeamPage() {
           </div>
         </div>
       </div>
-    </section>
   );
 }
 
