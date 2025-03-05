@@ -1,11 +1,11 @@
 import { isHackathonLive } from "../constants.js";
-import { Link } from "react-router-dom";
+import Button from "../components/Button.jsx"
 
 const ProblemStatementsNotRevealedYet = () => {
   return (
     <div className="h-dvh w-dvw bg-blue-200 flex flex-col justify-center items-center relative">
       <svg
-        className="size-full md:size-full"
+        className="size-full md:size-full absolute -top-10 left-0"
         id="svg-lines"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -30,9 +30,7 @@ const ProblemStatementsNotRevealedYet = () => {
       </svg>
       <div className="text-center text-white font-['general'] absolute top-2/3 -translate-y-1/2">
         <h1>Problem Statements are not Live yet!</h1>
-        <Link to="/" className="underline">
-          Go Back Home
-        </Link>
+        <Button title="Go Back Home" to="/" containerClass="mt-4" />
       </div>
     </div>
   );
