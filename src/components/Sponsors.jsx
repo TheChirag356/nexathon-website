@@ -25,34 +25,38 @@ const Sponsors = () => {
 
         <div className="w-full mx-2 mt-20">
           <div className="flex flex-wrap justify-center gap-15 my-10">
-            {companies.map((company, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center relative"
-                onMouseEnter={() => setIsMouseHover(true)}
-                onMouseLeave={() => setIsMouseHover(false)}
-              >
-                <Link
-                  to={company.link}
-                  className="flex flex-col items-center justify-center"
+            {companies.length > 0 ? (
+              companies.map((company, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center relative"
+                  onMouseEnter={() => setIsMouseHover(true)}
+                  onMouseLeave={() => setIsMouseHover(false)}
                 >
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    className={`h-16 transition-all duration-100 ease-in-out ${
-                      isMouseHover ? "blur-sm" : ""
-                    }`}
-                  />
-                  <p
-                    className={`absolute transition-opacity duration-100 ease-in-out mt-2 font-['circular-web'] text-xl ${
-                      isMouseHover ? "opacity-100" : "opacity-0"
-                    }`}
+                  <Link
+                    to={company.link}
+                    className="flex flex-col items-center justify-center"
                   >
-                    {company.name}
-                  </p>
-                </Link>
-              </div>
-            ))}
+                    <img
+                      src={company.logo}
+                      alt={company.name}
+                      className={`h-16 transition-all duration-100 ease-in-out ${
+                        isMouseHover ? "blur-sm" : ""
+                      }`}
+                    />
+                    <p
+                      className={`absolute transition-opacity duration-100 ease-in-out mt-2 font-['circular-web'] text-xl ${
+                        isMouseHover ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
+                      {company.name}
+                    </p>
+                  </Link>
+                </div>
+              ))
+            ) : (
+              <div className="text-3xl font-['circular-web'] font-semibold uppercase">To be released soon</div>
+            )}
           </div>
         </div>
         <div className="mt-15 text-center flex flex-col items-center">
@@ -73,10 +77,4 @@ const Sponsors = () => {
 
 export default Sponsors;
 
-const companies = [
-  {
-    name: "Dorahacks",
-    logo: "https://dorahacks.io/_nuxt/12e03b15.svg",
-    link: "https://dorahacks.io",
-  },
-];
+const companies = [];
