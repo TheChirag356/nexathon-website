@@ -29,7 +29,7 @@ const ProblemStatementsNotRevealedYet = () => {
         />
       </svg>
       <div className="text-center text-white font-['general'] absolute top-2/3 -translate-y-1/2">
-        Nexathon is not Live yet!
+        Problem Statements are not Live yet!
       </div>
     </div>
   );
