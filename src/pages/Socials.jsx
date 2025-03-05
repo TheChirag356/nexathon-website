@@ -10,11 +10,12 @@ import { Link } from "react-router-dom";
 const Button = ({ Icon, title, to }) => {
   return (
     <button
-      className="inline-flex h-12 animate-background-shine items-center justify-center rounded-full border border-gray-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-gray-400 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
+      className="inline-flex h-12 animate-background-shine items-center justify-between rounded-full border border-gray-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-gray-400 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
       onClick={() => window.open(to, "_blank")}
     >
       {Icon && <Icon className="mr-2 h-5 w-5" />}
       {title}
+      <div></div>
     </button>
   );
 };
