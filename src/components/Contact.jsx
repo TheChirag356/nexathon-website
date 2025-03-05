@@ -21,7 +21,7 @@ const Contact = () => {
             to="/register"
           />
         </div>
-        <div class="absolute inset-0 h-full w-full bg-blue-200 bg-[linear-gradient(to_right,#404040_1px,transparent_1px),linear-gradient(to_bottom,#404040_1px,transparent_1px)] bg-[size:6rem_4rem] -z-[1]"></div>
+        <div className="absolute inset-0 h-full w-full bg-blue-200 bg-[linear-gradient(to_right,#404040_1px,transparent_1px),linear-gradient(to_bottom,#404040_1px,transparent_1px)] bg-[size:6rem_4rem] -z-[1]"></div>
       </div>
     </div>
   );
