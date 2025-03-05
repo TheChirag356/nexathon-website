@@ -8,7 +8,6 @@ const AnimatedTitle = ({ title, containerClass }) => {
     const ctx = gsap.context(() => {
       const titleAnimation = gsap.timeline({
         scrollTrigger: {
-          // markers: true,
           trigger: containerRef.current,
           start: "100 bottom",
           end: "center bottom",
