@@ -1,5 +1,4 @@
 import { isHackathonLive } from "../constants.js";
-import "./styles.css";
 
 const ProblemStatementsNotRevealedYet = () => {
   return (
