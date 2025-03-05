@@ -147,6 +147,19 @@
 }
 
 @layer utilities {
+  #svg-lines path {
+    stroke-dasharray: 100;
+    animation: dash 5s linear infinite;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@layer utilities {
   .animate-background-shine {
     animation: background-shine 2s linear infinite;
   }
