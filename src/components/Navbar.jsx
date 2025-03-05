@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navContainerRef = useRef(null);
-  const audioElementRef = useRef(null);
 
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavVisible, setIsNavVisible] = useState(true);
@@ -36,9 +35,6 @@ const Navbar = () => {
       duration: 0.2,
     });
   }, [isNavVisible]);
-
-  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
-  const [isIndicatorActive, setIsIndicatorActive] = useState(false);
 
   const navItems = [
     "Home",
