@@ -1,12 +1,14 @@
 const hackathonLink = "https://dorahacks.io";
-const dateOfHackathon = 3;
-const monthOfHackathon = 4;
+const globalDateOfHackathon = 3;
+const globalMonthOfHackathon = 4;
 
-export const isHackathonLive = () => {
+export const isHackathonLive = (problemStatements = false) => {
+    const eventDate = problemStatements ? 21 : globalDateOfHackathon;
+    const eventMonth = problemStatements ? 3 : globalMonthOfHackathon;
     const today = new Date();
-    const targetDate = new Date(2025, monthOfHackathon - 1, dateOfHackathon);
+    const targetDate = new Date(2025, eventMonth - 1, eventDate);
 
-    return today >= targetDate; // Returns true if today is on or after the hackathon date
+    return today >= targetDate; // Returns true if today is on or after the date
 };
 
-export { hackathonLink, dateOfHackathon, monthOfHackathon };
+export { hackathonLink, globalDateOfHackathon as dateOfHackathon, globalMonthOfHackathon as monthOfHackathon };

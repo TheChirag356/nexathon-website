@@ -1,4 +1,5 @@
 import { isHackathonLive } from "../constants.js";
+import { Link } from "react-router-dom";
 
 const ProblemStatementsNotRevealedYet = () => {
   return (
@@ -28,14 +29,17 @@ const ProblemStatementsNotRevealedYet = () => {
         />
       </svg>
       <div className="text-center text-white font-['general'] absolute top-2/3 -translate-y-1/2">
-        Problem Statements are not Live yet!
+        <h1>Problem Statements are not Live yet!</h1>
+        <Link to="/" className="underline">
+          Go Back Home
+        </Link>
       </div>
     </div>
   );
 };
 
 const ProblemStatementsPage = () => {
-  const ishackathonlive = isHackathonLive();
+  const ishackathonlive = isHackathonLive(true);
   if (!ishackathonlive) {
     return <ProblemStatementsNotRevealedYet />;
   } else {
