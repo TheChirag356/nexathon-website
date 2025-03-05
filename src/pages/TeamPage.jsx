@@ -9,6 +9,7 @@ import {
   RiGithubFill,
   RiRedditFill,
 } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,7 +62,7 @@ const Github = ({ link }) => (
 );
 
 const Card = ({ name, role, imgSrc, socialLinks }) => (
-  <div className="flex flex-col items-center p-8 transition-colors duration-300 transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+  <div className="flex flex-col items-center p-8 duration-400 transform cursor-pointer group rounded-xl hover:backdrop-blur-[2px] transition-all ease-in-out">
     <img
       className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
       src={imgSrc}
@@ -120,57 +121,59 @@ function TeamPage() {
   }, []);
 
   return (
-      <div
-        id="team"
-        className="bg-[url('https://assets.codepen.io/9051928/gradient.png')] min-h-dvh w-screen relative"
-      >
-        <div className=""></div>
-        <div
-          id="section-2-inner-div"
-          className="backdrop-blur-xl z-2 min-h-dvh w-screen px-5"
+    <div id="team" className="min-h-dvh w-screen relative">
+      <div className="sticky top-0 left-auto md:left-0 z-10">
+        <Link
+          to="/"
+          className="text-white bg-gray-900 h-7 m-4 rounded-full inline-flex justify-center items-center px-3 font-medium text-sm font-['general']"
         >
-          <div
-            id="tabs"
-            className="flex items-center justify-center py-10 text-nowrap"
-          >
-            <div className="flex items-center p-1 border gap-2 border-white rounded-xl flex-wrap justify-center">
-              {teams.map((team) => (
-                <button
-                  key={team}
-                  className={`px-4 py-2 text-sm font-medium capitalize md:py-3 rounded-xl md:px-12 cursor-pointer font-['general'] ${
-                    team === tab
-                      ? "text-blue-200 bg-white "
-                      : "text-white transition-colors duration-300 hover:bg-white hover:text-black"
-                  }`}
-                  onClick={() => setTab(team)}
-                >
-                  {team}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div
-            id="members"
-            className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4"
-          >
-            {teamMembersList
-              .filter((member) => member.team === tab)
-              .map((member, index) => (
-                <Card
-                  key={index}
-                  name={member.name}
-                  role={
-                    member.team === "Core"
-                      ? `${member.role}`
-                      : `${member.team} ${member.role}`
-                  }
-                  imgSrc={member.img}
-                  socialLinks={member.links}
-                />
-              ))}
+          Go Back To Home
+        </Link>
+      </div>
+      <div id="section-2-inner-div" className="min-h-dvh w-screen px-5">
+        <div
+          id="tabs"
+          className="flex items-center justify-center py-12 text-nowrap sticky top-0 left-0 z-[8]"
+        >
+          <div className="flex items-center p-1 border gap-2 border-white rounded-xl flex-wrap justify-center backdrop-blur-xs">
+            {teams.map((team) => (
+              <button
+                key={team}
+                className={`px-4 py-2 text-sm font-medium capitalize md:py-3 rounded-xl md:px-12 cursor-pointer font-['general'] ${
+                  team === tab
+                    ? "text-blue-200 bg-white "
+                    : "text-white transition-colors duration-300 hover:bg-white hover:text-black"
+                }`}
+                onClick={() => setTab(team)}
+              >
+                {team}
+              </button>
+            ))}
           </div>
         </div>
+        <div
+          id="members"
+          className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4"
+        >
+          {teamMembersList
+            .filter((member) => member.team === tab)
+            .map((member, index) => (
+              <Card
+                key={index}
+                name={member.name}
+                role={
+                  member.team === "Core"
+                    ? `${member.role}`
+                    : `${member.team} ${member.role}`
+                }
+                imgSrc={member.img}
+                socialLinks={member.links}
+              />
+            ))}
+        </div>
       </div>
+      <div className="absolute inset-0 h-full w-full bg-blue-200 bg-[linear-gradient(to_right,#404040_1px,transparent_1px),linear-gradient(to_bottom,#404040_1px,transparent_2px)] bg-[size:6rem_4rem] -z-1"></div>
+    </div>
   );
 }
 
