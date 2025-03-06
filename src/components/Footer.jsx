@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="flex flex-col justify-center items-center size-full relative">
         <div className="flex md:flex-row flex-col justify-center items-center">
           <svg
-            className="size-full md:size-lvh absolute -top-10 left-0"
+            className="size-full md:size-full absolute -top-10"
             id="svg-lines"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -38,7 +38,7 @@ const Footer = () => {
               stroke-miterlimit="4"
             />
           </svg>
-          <div className="flex flex-col absolute md:mr-[15rem] md:top-1/2 top-96 md:right-0 transform -translate-y-1/2 gap-10 hover:shadow-xl">
+          <div className="flex absolute md:top-1/2 top-96 gap-10 drop-shadow-2xl z-10">
             {socialLinks.map((link, index) => (
               <a
                 id="footer-social-link"
@@ -46,9 +46,9 @@ const Footer = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors duration-500 ease-in-out hover:text-white text-5xl font-bold font-['circular-web'] uppercase"
+                className="transition-colors duration-500 ease-in-out hover:text-white text-5xl font-bold font-['circular-web'] uppercase hover:drop-shadow-2xl hover:shadow-[#fff]"
               >
-                {link.name}
+                {link.icon}
               </a>
             ))}
           </div>
