@@ -1,12 +1,26 @@
-import { FaDiscord, FaTwitter, FaYoutube, FaMedium } from "react-icons/fa";
-import anime from "animejs/lib/anime.es.js";
-import { useEffect } from "react";
-
+import { FaDiscord, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
 const socialLinks = [
-  { href: "https://discord.com", icon: <FaDiscord />, name: "Discord" },
-  { href: "https://twitter.com", icon: <FaTwitter />, name: "Twitter" },
-  { href: "https://youtube.com", icon: <FaYoutube />, name: "Youtube" },
-  { href: "https://linkedin.com", icon: <FaMedium />, name: "LinkedIn" },
+  // { href: "https://discord.com", icon: <FaDiscord />, name: "Discord" },
+  {
+    href: "https://www.instagram.com/nexathon_gtbit/",
+    icon: <FaInstagram />,
+    name: "Instagram",
+  },
+  {
+    href: "https://linkedin.com/company/nexus-ai-society",
+    icon: <FaLinkedin />,
+    name: "LinkedIn",
+  },
+  {
+    href: "https://www.youtube.com/@Nexus-TheAISociety",
+    icon: <FaYoutube />,
+    name: "Youtube",
+  },
+  {
+    href: "https://www.instagram.com/nexus_gtbit/",
+    icon: <FaInstagram />,
+    name: "Instagram",
+  },
 ];
 
 const Footer = () => {
@@ -57,7 +71,7 @@ const Footer = () => {
           id="footer-text"
           className="text-center text-sm font-light md:text-left overflow-hidden absolute bottom-0 pb-7 left-1/2 transform -translate-x-1/2 font-['general']"
         >
-          ©Nexus 2025. All rights reserved
+          ©Nexus 2025. Made with ❤️ by Chirag Arora
         </p>
       </div>
     </footer>

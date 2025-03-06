@@ -27,7 +27,7 @@ const TeamSection = () => {
 
   return (
     <div id="team" className="min-h-screen w-screen">
-      <div className="relative mt-36 mb-8 flex flex-col items-center gap-5">
+      <div className="relative mt-20 mb-8 flex flex-col items-center gap-5">
         <AnimatedTitle
           title="Our Team"
           containerClass="mt-5 !text-black text-center"
