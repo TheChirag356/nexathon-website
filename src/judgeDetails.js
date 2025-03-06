@@ -1,5 +1,13 @@
 const JudgeList = [
     {
+        name: "Lavanya Gupta",
+        links: {
+            linkedin: "https://www.linkedin.com/in/lgupta18/",
+            email: ""
+        },
+        img: "/judge_img/lavanya_gupta.jpg"
+    },
+    {
         name: "Gaurang Deshpande",
         links: {
             linkedin: "https://www.linkedin.com/in/gaurang-deshpande",
@@ -47,14 +55,6 @@ const JudgeList = [
         },
         img: "/judge_img/akshay_mittal.jpg"
     },
-    {
-        name: "Lavanya Gupta",
-        links: {
-            linkedin: "https://www.linkedin.com/in/lgupta18/",
-            email: ""
-        },
-        img: "/judge_img/lavanya_gupta.jpg"
-    }
 ];
 
 export { JudgeList }
