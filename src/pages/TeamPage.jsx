@@ -124,7 +124,7 @@ function TeamPage() {
     <div id="team" className="min-h-dvh w-screen relative">
       <div className="sticky top-0 left-auto md:left-0 z-10">
         <Link
-          to="/"
+          to="/#team"
           className="text-white bg-gray-900 h-7 m-4 rounded-full inline-flex justify-center items-center px-3 font-medium text-sm font-['general']"
         >
           Go Back To Home
