@@ -10,6 +10,7 @@ import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions.jsx
 import Timeline from "../components/Timeline.jsx";
 import Prizes from "../components/Prizes.jsx";
 import TeamSection from "../components/TeamSection.jsx";
+import Judges from "../components/Judges.jsx";
 
 const MainPage = () => {
   return (
@@ -21,6 +22,7 @@ const MainPage = () => {
       <ProblemStatements />
       <Timeline />
       <Sponsors />
+      <Judges />
       <Prizes />
       <TeamSection />
       <FrequentlyAskedQuestions />
