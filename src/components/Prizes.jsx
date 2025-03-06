@@ -14,9 +14,9 @@ export default function Prizes() {
           containerClass="mt-4 pointer-events-none mix-blend-difference relative z-10 selection:bg-yellow-300"
         />
 
-        <div className="mt-8 grid gap-4 sm:mt-12 lg:grid-cols-3 lg:grid-rows-2">
+        <div className="mt-8 flex flex-wrap gap-4 justify-center sm:mt-12">
           {/* Winner */}
-          <div className="relative lg:row-span-1">
+          <div className="relative flex-1 min-w-[300px]">
             <div className="absolute inset-px rounded-lg bg-white"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(1.5rem+1px)]">
               <div className="px-6 pt-6 pb-2 sm:px-8 sm:pt-8">
@@ -40,7 +40,7 @@ export default function Prizes() {
           </div>
 
           {/* 1st Runner Up */}
-          <div className="relative lg:row-span-1">
+          <div className="relative flex-1 min-w-[300px]">
             <div className="absolute inset-px rounded-lg bg-white"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(1.5rem+1px)]">
               <div className="px-6 pt-6 pb-2 sm:px-8 sm:pt-8">
@@ -64,7 +64,7 @@ export default function Prizes() {
           </div>
 
           {/* 2nd Runner Up */}
-          <div className="relative lg:row-span-1">
+          <div className="relative flex-1 min-w-[300px]">
             <div className="absolute inset-px rounded-lg bg-white"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(1.5rem+1px)]">
               <div className="px-6 pt-6 pb-2 sm:px-8 sm:pt-8">
@@ -88,9 +88,9 @@ export default function Prizes() {
           </div>
 
           {/* Best all Freshers Team */}
-          <div className="relative lg:col-start-2 lg:row-start-2 min-w-[20rem]">
+          <div className="relative min-w-[300px]">
             <div className="absolute inset-px rounded-lg bg-white"></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(1.5rem+1px)]">
               <div className="px-6 pt-6 pb-2 sm:px-8 sm:pt-8">
                 <p className="text-lg font-medium tracking-tight text-gray-950 text-center font-['circular-web']">
                   Best All Freshers Team
@@ -99,15 +99,16 @@ export default function Prizes() {
                   Exciting Swags
                 </p>
               </div>
-              <div className="@container flex flex-1 items-center max-lg:py-4 lg:pb-2">
-                <img
-                  className="h-[min(120px,35cqw)] object-cover"
-                  src="https://tailwindui.com/plus-assets/img/component-images/bento-03-security.png"
-                  alt="Security illustration"
-                />
+              <div className="@container relative min-h-[20rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
+                <div className="absolute inset-x-8 top-6 bottom-0 overflow-hidden rounded-t-[12cqw] shadow-xl">
+                  <img
+                    className="size-full object-cover object-top"
+                    src="img/best_all_freshers_team_prize.jpg"
+                    alt="Best all freshers team prize"
+                  />
+                </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5"></div>
           </div>
         </div>
       </div>
