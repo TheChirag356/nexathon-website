@@ -1,6 +1,4 @@
 import AnimatedTitle from "../components/AnimatedTitle.jsx";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { useState, useEffect } from "react";
 import { TeamMembersList, Teams } from "../teamDetails.js";
 import {
@@ -10,8 +8,6 @@ import {
   RiRedditFill,
 } from "react-icons/ri";
 import { Link } from "react-router-dom";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const X = ({ link }) => (
   <a
@@ -97,28 +93,6 @@ function TeamPage() {
   const teamMembersList = TeamMembersList;
   const teams = Teams;
   const [tab, setTab] = useState(Teams[0]);
-
-  const handleButtonClick = (team) => {
-    console.log(team);
-    console.log(tab);
-    setTab(team);
-  };
-
-  useEffect(() => {
-    gsap.fromTo(
-      "#section-2",
-      { clipPath: "circle(0% at 50% 0%)" },
-      {
-        clipPath: "circle(100% at 50% 50%)",
-        scrollTrigger: {
-          trigger: "#section-2",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      }
-    );
-  }, []);
 
   return (
     <div id="team" className="min-h-dvh w-screen relative">
