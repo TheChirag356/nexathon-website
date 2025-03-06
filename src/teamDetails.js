@@ -55,8 +55,18 @@ const TeamMembersList = [
     },
   },
   {
+    name: "Anushka Mazumdar",
+    team: "Core",
+    role: "Design Team Lead",
+    img: "/team_img/core/anushka_mazumdar.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/anushka-mazumdar/",
+      github: "https://github.com/anushka-mazumdar",
+      },
+  },
+  {
     name: "Chirag Garg",
-    team: "Tech",
+    team: "Core",
     role: "Team Lead",
     img: "team_img/core/chirag_garg.png",
     links: {
@@ -68,8 +78,9 @@ const TeamMembersList = [
   },
   {
     name: "Shreyas Jani",
-    team: "Tech",
+    team: "Core",
     role: "Tech Lead",
+    img: "team_img/core/shreyas_jani.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/janishreyas/",
       x: "https://x.com/JaniShreyas77",
