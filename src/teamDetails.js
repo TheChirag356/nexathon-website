@@ -54,6 +54,29 @@ const TeamMembersList = [
       github: "https://github.com/Pulkit4761",
     },
   },
+  {
+    name: "Chirag Garg",
+    team: "Tech",
+    role: "Team Lead",
+    img: "team_img/core/chirag_garg.png",
+    links: {
+      linkedin: "https://www.linkedin.com/in/garg-chirag--/",
+      x: "https://x.com/Chiggy__",
+      github: "https://github.com/Chiggy-Playz",
+      reddit: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+    },
+  },
+  {
+    name: "Shreyas Jani",
+    team: "Tech",
+    role: "Tech Lead",
+    links: {
+      linkedin: "https://www.linkedin.com/in/janishreyas/",
+      x: "https://x.com/JaniShreyas77",
+      github: "https://github.com/JaniShreyas",
+      reddit: "https://reddit.com/",
+    },
+  },
 ];
 
 /* Instructions
