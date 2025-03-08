@@ -79,7 +79,7 @@ const Hero = () => {
               className="apply-button"
               data-hackathon-slug="nexathon-3"
               data-button-theme="dark"
-              style="height: 44px; width: 312px"
+              style={{ height: "44px", width: "312px" }}
             ></div>
           </div>
         </div>
