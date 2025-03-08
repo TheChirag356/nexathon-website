@@ -61,13 +61,13 @@ const Navbar = () => {
               alt="Logo"
               className="w-10 rounded-[50%]"
             />
-            <Button
+            {/* <Button
               id="hackathon-button"
-              title="Dorahacks"
+              title="Devfolio"
               rightIcon={<TiLocationArrow />}
               containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
               to="/register"
-            />
+            /> */}
           </div>
 
           <div className="flex h-full items-center">
