@@ -65,7 +65,7 @@ const Hero = () => {
               Enter the metagame <br /> of hackathons
             </p>
 
-            <Button
+            {/* <Button
               id="register-button"
               title="Register Here"
               leftIcon={<TiLocationArrow />}
@@ -73,7 +73,14 @@ const Hero = () => {
               to="/register"
               datahackathonslug="nexathon-3"
               datatheme="dark"
-            />
+            /> */}
+
+            <div
+              className="apply-button"
+              data-hackathon-slug="nexathon-3"
+              data-button-theme="dark"
+              style="height: 44px; width: 312px"
+            ></div>
           </div>
         </div>
       </div>
