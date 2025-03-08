@@ -8,6 +8,8 @@ const Button = ({
   containerClass = "",
   to = "/",
   disabled = false,
+  datahackathonslug,
+  datatheme,
 }) => {
   return (
     <Link
@@ -21,6 +23,8 @@ const Button = ({
           ${disabled ? "cursor-not-allowed opacity-50" : ""}
           ${containerClass}`}
         disabled={disabled}
+        data-hackathon-slug={datahackathonslug}
+        data-button-theme={datatheme}
       >
         {leftIcon}
         <span className="relative inline-flex overflow-hidden font-['general'] text-xs uppercase">

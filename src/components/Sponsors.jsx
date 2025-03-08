@@ -55,7 +55,9 @@ const Sponsors = () => {
                 </div>
               ))
             ) : (
-              <div className="text-3xl font-['circular-web'] font-semibold uppercase">To be released soon</div>
+              <div className="text-3xl font-['circular-web'] font-semibold uppercase">
+                To be released soon
+              </div>
             )}
           </div>
         </div>
@@ -65,7 +67,7 @@ const Sponsors = () => {
           </p>
           <Button
             title="Contact Us"
-            to="mailto:nexus@gtbit.ac.in"
+            to="mailto:connect@nexathon.tech"
             containerClass="mt-4 flex-center gap-1 !bg-blue-200 text-blue-50"
             rightIcon={<TiLocationArrow />}
           ></Button>
@@ -77,4 +79,17 @@ const Sponsors = () => {
 
 export default Sponsors;
 
-const companies = [];
+const companies = [
+  {
+    name: "Devfolio",
+    logo: "https://devfolio.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fcc5173fd-2a6a-434e-9d48-1883d77bfc9f%2F_Colored.png?table=block&id=d55db242-49ff-4e05-8fae-865dc9b77873&spaceId=5bc094c8-987c-4274-938f-8a9d3fad1a04&width=660&userId=&cache=v2",
+    link: "https://devfolio.co",
+    alt: "DEVFOLIO LOGO",
+  },
+  {
+    name: "ETHIndia",
+    logo: "https://devfolio.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F5bc094c8-987c-4274-938f-8a9d3fad1a04%2F4cf44e1b-7c65-42d7-81e8-dcd506fc2842%2FUntitled.png?table=block&id=f0624a9f-0c26-457b-bfc4-7a9bc1716670&spaceId=5bc094c8-987c-4274-938f-8a9d3fad1a04&width=660&userId=&cache=v2",
+    link: "https://ethindia.co",
+    alt: "ETHINDIA LOGO",
+  }
+];
