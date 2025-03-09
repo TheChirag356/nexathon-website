@@ -22,7 +22,7 @@ const MainPage = () => {
       <ProblemStatements />
       <Timeline />
       <Sponsors />
-      <Judges />
+      {/* <Judges /> */}
       <Prizes />
       <TeamSection />
       <FrequentlyAskedQuestions />
