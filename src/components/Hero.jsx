@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-80 z-2"></div>
         <div>
           <img
-            src="img/hero4.png"
+            src="/img/hero4.png"
             alt=""
             className="absolute left-0 top-0 size-full object-cover object-center"
           />
